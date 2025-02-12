@@ -1,58 +1,92 @@
-# Battle Arena Game
+# Archery Game
 
-A C# console-based battle arena game where players compete in a coordinate system with unique health and set values.
+This project simulates an archery game where three players (A, B, and C) are positioned on a coordinate system. The game calculates distances between players and determines the winner based on set rules.
 
-## 🎮 Game Description
+## Project Overview
 
-This game simulates a battle arena where three characters (A, B, and C) fight based on their positions, health values, and set numbers in a 20x20 coordinate grid (-10 to 10 on both axes).
+The project consists of a single C# program that performs the following tasks:
+1. Prompts the user to enter coordinates for player A.
+2. Generates random coordinates for players B and C.
+3. Calculates distances between players.
+4. Ensures no two players are at the same coordinates.
+5. Assigns random sets and health values to each player.
+6. Displays the coordinates, sets, and health of each player.
+7. Simulates rounds of battles between players based on their distances and sets.
+8. Determines and displays the winner based on the scores.
 
-## 🎯 Features
+### Features
 
-- Interactive coordinate-based gameplay
-- Visual grid system with colored characters
-- Random character placement
-- Health and set system
-- Distance-based combat
-- Score calculation
-- Multiple round battles
-- Visual battle state representation
+The game includes:
+1. User input validation for player A's coordinates.
+2. Random generation of coordinates for players B and C.
+3. Distance calculation between players.
+4. Random assignment of sets and health values.
+5. Display of a coordinate system with players' positions.
+6. Simulation of battles based on sets and distances.
+7. Display of the winner and their score.
 
-## 🎲 Game Rules
+## Requirements
 
-### Character Properties
-- Each character has:
-  - Position (x,y coordinates)
-  - Health (60, 80, or 100)
-  - Set number (1, 2, or 3)
+The project requires .NET Core SDK to compile and run the C# files.
 
-### Battle Mechanics
-1. Player places character A
-2. Characters B and C are randomly placed
-3. Battles occur between closest characters
-4. Combat is determined by:
-   - Set number differences
-   - Manhattan distance
-   - Character health
-5. Characters turn red when defeated
+## Usage
 
-### Scoring System
-- Score calculation: `(Manhattan distance × 10) + (100 - (health - 25))`
-- Higher scores win
-- Health reduces by 25 after combat
-
-### Distance Rules
-- Characters must be within 15 units to battle
-- Manhattan distance affects scoring
-- Battles occur between closest pairs first
-
-## 🚀 Getting Started
-
-### Prerequisites
-- .NET Framework or .NET Core
-- Visual Studio or any C# compatible IDE
-- Windows OS (for console features)
-
-### Installation
 1. Clone the repository:
-```bash
-git clone https://github.com/barissolcay/Archery-Game.git
+
+    ```bash
+    git clone https://github.com/barissolcay/Archery-Game.git
+    cd Archery-Game
+    ```
+
+2. Compile the C# files:
+
+    ```bash
+    dotnet build
+    ```
+
+3. Run the program:
+
+    ```bash
+    dotnet run --project final_code.csproj
+    ```
+
+## Game Flow
+
+1. The player is prompted to enter coordinates for player A (Ax and Ay) within the range [-10, 10].
+2. The program generates random coordinates for players B and C.
+3. The distances between players are calculated, and the program ensures no two players share the same coordinates.
+4. Each player is assigned a random set and health value.
+5. The program displays the coordinates, sets, and health of each player.
+6. The program simulates rounds of battles between players based on their distances and sets.
+7. The winner is determined based on the scores, and the result is displayed.
+
+## Contributing
+
+Feel free to open issues or submit pull requests if you have suggestions for improvements or find any bugs.
+
+## License
+
+MIT License
+
+```markdown
+MIT License
+
+Copyright (c) 2025 Baris Solcay
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
